@@ -5,15 +5,16 @@ plugins {
     id("org.jetbrains.kotlin.plugin.parcelize")
     id("com.google.devtools.ksp")
     id("dagger.hilt.android.plugin")
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
     namespace = "com.example.messenger"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.messenger"
-        minSdk = 35
+        minSdk = 28
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -61,6 +62,7 @@ dependencies {
 
     // Hilt
     implementation(libs.hilt.android.v244)
+    implementation(libs.firebase.database)
     ksp(libs.hilt.android.compiler)
 
     // Retrofit
@@ -106,4 +108,8 @@ dependencies {
 
     //adding circle image view
     implementation ("de.hdodenhof:circleimageview:3.1.0")
+
+    //Firebase
+    implementation("com.google.firebase:firebase-database-ktx:21.0.0")
+    implementation("com.google.firebase:firebase-auth:22.3.1")
 }

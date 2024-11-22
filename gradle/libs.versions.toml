@@ -6,7 +6,7 @@ coreKtxVersion = "1.13.1"
 espressoCoreVersion = "3.6.1"
 fragmentKtx = "1.8.4"
 glide = "4.14.2"
-gradle = "8.4.2"
+gradle = "8.7.0"
 gsonVersion = "2.10.1"
 hiltAndroidVersion = "2.48.1"
 junitJunit = "4.13.2"
@@ -24,6 +24,9 @@ recyclerviewSelection = "1.1.0"
 retrofit = "2.9.0"
 roomRuntime = "2.6.1"
 kotlin = "1.9.21"
+googleGmsGoogleServices = "4.4.2"
+firebaseAuth = "23.1.0"
+firebaseDatabase = "21.0.0"
 
 [libraries]
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
@@ -58,5 +61,8 @@ kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-c
 logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
 material = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 [plugins]
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }

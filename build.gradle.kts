@@ -17,4 +17,5 @@ plugins {
     id("org.jetbrains.kotlin.plugin.parcelize") version "1.8.20" apply false
     id("com.google.devtools.ksp") version "1.9.21-1.0.15" apply false
     id("com.google.dagger.hilt.android") version "2.48.1" apply false
+    alias(libs.plugins.google.gms.google.services) apply false
 }
