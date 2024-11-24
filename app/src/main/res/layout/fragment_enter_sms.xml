@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.auth.EnterSmsFragment">
+
+
+    <ImageView
+        android:id="@+id/smsEnterFragmentImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/sms"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.2"/>
+
+    <TextView
+        android:id="@+id/smsEnterFragmentTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Проверьте смс в телефоне"
+        android:textColor="@color/black"
+        android:textSize="@dimen/normalText"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/smsEnterFragmentImageView"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+        android:id="@+id/smsEnterFragmentSubtitleText"
+        android:layout_width="240dp"
+        android:layout_height="68dp"
+        android:text="Мы отправили код в смс сообщении, на номер +7912989232"
+        android:textColor="@color/hintColorGray"
+        android:textSize="@dimen/smallText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/smsEnterFragmentTitleText"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/smsEnterFragmentNumberPhoneEditTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Введите смс"
+        style="@style/OutlinedTextInputStyle"
+        app:layout_constraintTop_toBottomOf="@+id/smsEnterFragmentSubtitleText"
+        android:layout_margin="@dimen/horizontalMargin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

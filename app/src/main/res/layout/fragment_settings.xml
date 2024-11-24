@@ -1,13 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.SettingsFragment">
+    tools:context=".ui.main.SettingsFragment">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settingsFragmentHeader"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Настройки" />
+        android:layout_height="100dp"
+        android:background="@color/main_color_day_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/settingsFragmentUserImage"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/baseline_account_circle_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/settingsFragmentUserNameTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Руслан Иванов"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normalText"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/settingsFragmentUserImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/settingsFragmentUserImage"
+            app:layout_constraintTop_toTopOf="@id/settingsFragmentUserImage"
+            app:layout_constraintVertical_bias="0.369" />
+
+        <TextView
+            android:id="@+id/settingsFragmentUserStatusTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hintColorWhite"
+            android:textSize="@dimen/smallText"
+            android:layout_marginStart="16dp"
+            android:text="в сети"
+            android:includeFontPadding="false"
+            app:layout_constraintTop_toBottomOf="@id/settingsFragmentUserNameTV"
+            app:layout_constraintStart_toEndOf="@id/settingsFragmentUserImage"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <TextView
+        android:id="@+id/settingsFragmentTitleAccountText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Аккаунт"
+        android:textColor="@color/main_color_day_light"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_marginTop="@dimen/verticalMargin"
+        android:layout_marginStart="@dimen/horizontalMargin"
+        app:layout_constraintTop_toBottomOf="@+id/settingsFragmentHeader"/>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settingsFragmentChangeNumberField"
+        app:layout_constraintTop_toBottomOf="@id/settingsFragmentTitleAccountText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/ripple_effect"
+        style="@style/settingsFragmentChangeFields">
+
+        <TextView
+            android:id="@+id/settingsFragmentPhoneNumberTV"
+            android:text="+7 (916) 956-34-43"
+            app:layout_constraintTop_toTopOf="@+id/settingsFragmentChangeNumberField"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/settingsFragmentMainFieldText" />
+
+        <TextView
+            android:id="@+id/settingsFragmentPhoneNumberHintTV"
+            android:text="Нажмите, чтобы изменить номер телефона"
+            app:layout_constraintTop_toBottomOf="@+id/settingsFragmentPhoneNumberTV"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/settingsFragmentChangeFieldHintText" />
+
+        <LinearLayout
+            android:id="@+id/divider"
+            app:layout_constraintTop_toBottomOf="@id/settingsFragmentPhoneNumberHintTV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/settingsFragmentMainDivider" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settingsFragmentChangeLoginField"
+        app:layout_constraintTop_toBottomOf="@id/settingsFragmentChangeNumberField"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/ripple_effect"
+        style="@style/settingsFragmentChangeFields">
+
+        <TextView
+            android:id="@+id/settingsFragmentLoginTV"
+            android:text="\@Ivanov"
+            app:layout_constraintTop_toTopOf="@+id/settingsFragmentChangeLoginField"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/settingsFragmentMainFieldText" />
+
+        <TextView
+            android:id="@+id/settingsFragmentLoginHintTV"
+            android:text="Имя пользователя"
+            app:layout_constraintTop_toBottomOf="@+id/settingsFragmentLoginTV"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/settingsFragmentChangeFieldHintText" />
+
+        <LinearLayout
+            android:id="@+id/dividerTwo"
+            app:layout_constraintTop_toBottomOf="@id/settingsFragmentLoginHintTV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/settingsFragmentMainDivider" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settingsFragmentChangeAboutField"
+        app:layout_constraintTop_toBottomOf="@id/settingsFragmentChangeLoginField"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/ripple_effect"
+        style="@style/settingsFragmentChangeFields">
+
+        <TextView
+            android:id="@+id/settingsFragmentAboutTV"
+            android:text="О себе"
+            app:layout_constraintTop_toTopOf="@+id/settingsFragmentChangeAboutField"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/settingsFragmentMainFieldText" />
+
+        <TextView
+            android:id="@+id/settingsFragmentAboutHintTV"
+            android:text="Напишите немного о себе"
+            app:layout_constraintTop_toBottomOf="@+id/settingsFragmentAboutTV"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/settingsFragmentChangeFieldHintText" />
+
+        <LinearLayout
+            android:id="@+id/dividerThree"
+            app:layout_constraintTop_toBottomOf="@id/settingsFragmentAboutHintTV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/settingsFragmentMainDivider" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/settingsFragmentChangePhotoButtonBTN"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        app:civ_circle_background_color="@color/white"
+        app:civ_border_color="@color/hintColorGray"
+        app:civ_border_width="0.5dp"
+        android:src="@drawable/baseline_photo_camera_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settingsFragmentHeader"
+        app:layout_constraintBottom_toBottomOf="@id/settingsFragmentHeader"
+        android:layout_marginEnd="@dimen/horizontalMargin"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

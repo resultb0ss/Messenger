@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_auth"
+    app:startDestination="@id/startFragment">
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.messenger.ui.main.auth.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_let"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.messenger.ui.main.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_enterSmsFragment"
+            app:destination="@id/enterSmsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_let"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/enterPassFragment"
+        android:name="com.example.messenger.ui.main.auth.EnterPassFragment"
+        android:label="fragment_enter_pass"
+        tools:layout="@layout/fragment_enter_pass" />
+    <fragment
+        android:id="@+id/enterSmsFragment"
+        android:name="com.example.messenger.ui.main.auth.EnterSmsFragment"
+        android:label="fragment_enter_sms"
+        tools:layout="@layout/fragment_enter_sms" >
+        <action
+            android:id="@+id/action_enterSmsFragment_to_enterPassFragment"
+            app:destination="@id/enterPassFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_let"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="phone"
+            app:argType="string"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>

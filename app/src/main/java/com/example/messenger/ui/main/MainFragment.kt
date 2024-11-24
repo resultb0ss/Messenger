@@ -1,24 +1,24 @@
-package com.example.messenger.ui
+package com.example.messenger.ui.main
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.messenger.R
-import com.example.messenger.databinding.FragmentContactsBinding
-import com.example.messenger.databinding.FragmentMyProfileBinding
+import androidx.fragment.app.Fragment
+import com.example.messenger.databinding.FragmentMainBinding
 
-class ContactsFragment : Fragment() {
 
-    private var _binding: FragmentContactsBinding? = null
+class MainFragment : Fragment() {
+
+    private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentContactsBinding.inflate(inflater, container, false)
+        _binding = FragmentMainBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 

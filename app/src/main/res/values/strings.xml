@@ -5,8 +5,8 @@
 
 
     <string name="drawer_menu_item_my_profile">Мой профиль</string>
-    <string name="drawer_menu_item_new_groups">Новые группы</string>
-    <string name="drawer_menu_item_contacts">Мои контакты</string>
+    <string name="drawer_menu_item_new_groups">Создать группу</string>
+    <string name="drawer_menu_item_contacts">Контакты</string>
     <string name="drawer_menu_item_saved_messages">Избранное</string>
     <string name="drawer_menu_item_help">Поддержка</string>
     <string name="drawer_menu_item_settings">Настройки</string>

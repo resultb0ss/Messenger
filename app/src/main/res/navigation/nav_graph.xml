@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/chatsFragment"
-        android:name="com.example.messenger.ui.ChatsFragment"
+        android:name="com.example.messenger.ui.main.ChatsFragment"
         android:label="@string/drawer_menu_item_chats"
         tools:layout="@layout/fragment_chats" >
         <action
@@ -37,32 +37,32 @@
     </fragment>
     <fragment
         android:id="@+id/contactsFragment"
-        android:name="com.example.messenger.ui.ContactsFragment"
+        android:name="com.example.messenger.ui.main.ContactsFragment"
         android:label="@string/drawer_menu_item_contacts"
         tools:layout="@layout/fragment_contacts" />
     <fragment
         android:id="@+id/helpFragment"
-        android:name="com.example.messenger.ui.HelpFragment"
+        android:name="com.example.messenger.ui.main.HelpFragment"
         android:label="@string/drawer_menu_item_help"
         tools:layout="@layout/fragment_help" />
     <fragment
         android:id="@+id/savedMessagesFragment"
-        android:name="com.example.messenger.ui.SavedMessagesFragment"
+        android:name="com.example.messenger.ui.main.SavedMessagesFragment"
         android:label="@string/drawer_menu_item_saved_messages"
         tools:layout="@layout/fragment_saved_messages" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.messenger.ui.SettingsFragment"
+        android:name="com.example.messenger.ui.main.SettingsFragment"
         android:label="@string/drawer_menu_item_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/myProfileFragment"
-        android:name="com.example.messenger.ui.MyProfileFragment"
+        android:name="com.example.messenger.ui.main.MyProfileFragment"
         android:label="@string/drawer_menu_item_my_profile"
         tools:layout="@layout/fragment_my_profile" />
     <fragment
         android:id="@+id/newGroupsFragment"
-        android:name="com.example.messenger.ui.NewGroupsFragment"
+        android:name="com.example.messenger.ui.main.NewGroupsFragment"
         android:label="@string/drawer_menu_item_new_groups"
         tools:layout="@layout/fragment_new_groups" />
 </navigation>

@@ -63,6 +63,7 @@ dependencies {
     // Hilt
     implementation(libs.hilt.android.v244)
     implementation(libs.firebase.database)
+    implementation(libs.androidx.activity)
     ksp(libs.hilt.android.compiler)
 
     // Retrofit
