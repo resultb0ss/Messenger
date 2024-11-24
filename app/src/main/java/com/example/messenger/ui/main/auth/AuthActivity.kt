@@ -1,10 +1,11 @@
 package com.example.messenger.ui.main.auth
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.messenger.databinding.ActivityAuthBinding
-import com.example.messenger.ui.main.auth.viewpager.ViewPagerAdapter
-import com.example.messenger.ui.main.auth.viewpager.ViewPagersPicture
+import com.example.messenger.ui.main.MainActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class AuthActivity : AppCompatActivity() {
 
@@ -16,6 +17,12 @@ class AuthActivity : AppCompatActivity() {
 
         _binding = ActivityAuthBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        AUTHFIREBASE = FirebaseAuth.getInstance()
+
+        if (AUTHFIREBASE.currentUser != null) {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
 
     }
 
