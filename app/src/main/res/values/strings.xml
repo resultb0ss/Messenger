@@ -14,5 +14,10 @@
 
     <string name="drawer_menu_first_divider">Группы и контакты</string>
     <string name="drawer_menu_second_divider">Поддержка и настройки</string>
+    <string name="change_name_fragment_first_name_field">Введите имя</string>
+    <string name="change_name_fragment_last_name_field">Введите Фамилию</string>
+    <string name="change_name_fragment_label_text">Изменить имя</string>
+    <string name="change_user_name_fragment_username_field">Username</string>
+    <string name="change_user_name_fragment_label_text">Изменить логин</string>
 
 </resources>

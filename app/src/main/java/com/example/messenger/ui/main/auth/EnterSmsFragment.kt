@@ -79,8 +79,18 @@ class EnterSmsFragment : Fragment() {
 
         AUTHFIREBASE.signInWithCredential(credential).addOnCompleteListener {
             if (it.isSuccessful) {
-                customToast("Вы успешно авторизованы")
-                startActivity(Intent(requireActivity(), MainActivity::class.java))
+                val uid = AUTHFIREBASE.currentUser?.uid.toString()
+                var dataMap: MutableMap<String, Any> = mutableMapOf<String,Any>()
+                dataMap[CHILD_ID] = uid
+                dataMap[CHILD_PHONE] = phone
+                dataMap[CHILD_USERNAME] = uid
+                REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(dataMap).addOnCompleteListener{
+                    if (it.isSuccessful){
+                        customToast("Вы успешно авторизованы")
+                        startActivity(Intent(requireActivity(), MainActivity::class.java))
+                    } else customToast(it.exception?.message.toString())
+                }
+
             } else customToast(it.exception?.message.toString())
         }
 
